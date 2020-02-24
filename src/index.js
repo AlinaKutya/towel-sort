@@ -1,6 +1,14 @@
+module.exports = function towelSort(matrix) {
+    if (!matrix) {
+        return [];
+    }
 
-// You should implement your task here.
+    for (let m in matrix) {
+        if (m % 2 !== 0) {
+            matrix[m].reverse();
+        }
+    }
 
-module.exports = function towelSort (matrix) {
-  return [];
-}
+    let matrix2 = [].concat(...matrix);
+    return matrix2;
+};
